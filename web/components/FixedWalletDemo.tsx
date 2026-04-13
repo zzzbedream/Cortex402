@@ -9,13 +9,15 @@ import {
   XCircle,
 } from "lucide-react";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || "").trim();
 const HORIZON_URL =
-  process.env.NEXT_PUBLIC_HORIZON_URL ||
-  "https://horizon-testnet.stellar.org";
+  (process.env.NEXT_PUBLIC_HORIZON_URL ||
+    "https://horizon-testnet.stellar.org").trim();
 const DEMO_AMOUNT = "0.1500000";
-const FIXED_SECRET_KEY = process.env.NEXT_PUBLIC_DEMO_SECRET_KEY || "";
-const MERCHANT_PUBLIC_KEY = process.env.NEXT_PUBLIC_MERCHANT_WALLET || "";
+const FIXED_SECRET_KEY =
+  (process.env.NEXT_PUBLIC_DEMO_SECRET_KEY || "").trim();
+const MERCHANT_PUBLIC_KEY =
+  (process.env.NEXT_PUBLIC_MERCHANT_WALLET || "").trim();
 
 const EXPLORER_BASE = "https://stellar.expert/explorer/testnet/tx";
 const FRIENDBOT_URL = "https://friendbot.stellar.org";
