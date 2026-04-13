@@ -1,0 +1,45 @@
+# Dependencias
+node_modules/
+.pnpm-store/
+
+# Entornos y secretos
+.env
+.env.local
+.env.*.local
+test_config.env
+*.pem
+*.key
+
+# Builds y cache
+dist/
+build/
+.next/
+out/
+.vercel
+.cache
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secretos detectados (prevencion)
+*secret*
+*key*
+*private*
+
+# Proyecto
+.cloudflared/
+test_report.json
+*.tsbuildinfo

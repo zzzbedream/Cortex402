@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General Sans from Fontshare */
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap");
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: "General Sans", system-ui, sans-serif;
+  }
+
+  ::selection {
+    @apply bg-brand-500/40 text-white;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #6366f1 100%);
+  }
+
+  .gradient-text-hero {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #c7d2fe 30%,
+      #818cf8 60%,
+      #6366f1 100%
+    );
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5
+      font-semibold text-black transition-all duration-300
+      hover:bg-gray-100 hover:shadow-lg hover:shadow-white/10
+      active:scale-[0.98];
+  }
+
+  .btn-glow {
+    @apply relative inline-flex items-center justify-center rounded-full
+      border border-white/20 bg-white/5 px-6 py-2.5 font-medium text-white
+      backdrop-blur-sm transition-all duration-300
+      hover:border-white/40 hover:bg-white/10;
+  }
+
+  .btn-glow::before {
+    content: "";
+    @apply absolute -top-px left-1/2 h-px w-1/2 -translate-x-1/2;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  }
+
+  .card-dark {
+    @apply rounded-2xl border border-white/10 bg-white/[0.03] p-6
+      backdrop-blur-sm transition-all duration-300
+      hover:border-white/20 hover:bg-white/[0.06];
+  }
+
+  .step-number {
+    @apply flex h-10 w-10 items-center justify-center rounded-full
+      border border-brand-500/30 bg-brand-500/10 text-sm font-bold text-brand-400;
+  }
+
+  .section-heading {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl;
+  }
+
+  .section-subheading {
+    @apply mt-4 max-w-2xl text-lg text-gray-400;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "cortex402-agent",
+  "version": "1.0.0",
+  "description": "Secure AI agent that consumes the cortex402 x402 payment middleware",
+  "main": "dist/agent_secure.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/agent_full.js",
+    "start:v2": "node dist/agent_secure.js",
+    "dev": "tsx src/agent_full.ts",
+    "dev:v2": "tsx src/agent_secure.ts",
+    "test:security": "tsx src/test_agent_security.ts",
+    "test:e2e": "bash test_end_to_end.sh",
+    "init": "tsx src/agent_full.ts init",
+    "pay": "tsx src/agent_full.ts direct"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^16.4.7",
+    "stellar-sdk": "^11.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
