@@ -233,8 +233,7 @@ npm install && npm run dev -- init
 
 ## Links
 
-- **Landing Page**: _[Vercel URL after deployment]_
-- **GitHub**: _[Repository URL]_
+- **Landing Page**: (https://web-eight-eta-28.vercel.app/#waitlist)
 - **Stellar Expert (Testnet)**: https://stellar.expert/explorer/testnet
 
 ## License
